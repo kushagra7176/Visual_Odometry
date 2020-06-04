@@ -228,12 +228,12 @@ flag = 0
 frame_count = 0
 data_points = []
 
-path = r"C:\Users\Kartik\Documents\ENPM673\PROJECT_3\ENPM673\Project_5\Oxford_dataset/stereo/centre"
+path = r"C:\Users\kusha\Documents\ENPM673\PROJECT_3\ENPM673\Project_5\Oxford_dataset/stereo/centre"
 list_of_filenames = [filename for filename in os.listdir(path)]
 # print(list_of_filenames)
 dataset_size = len(list_of_filenames)
 
-fx, fy, c_x, c_y, camera_img, LUT = rd.ReadCameraModel(r'C:\Users\Kartik\Documents\ENPM673\PROJECT_3\ENPM673\Project_5\Oxford_dataset/model')
+fx, fy, c_x, c_y, camera_img, LUT = rd.ReadCameraModel(r'C:\Users\kusha\Documents\ENPM673\PROJECT_3\ENPM673\Project_5\Oxford_dataset/model')
 K = np.array([[fx, 0, c_x], [0, fy, c_y], [0, 0, 1]])
 
 for index in range(20, dataset_size - 1):
@@ -334,7 +334,7 @@ for index in range(20, dataset_size - 1):
     plt.scatter(-p_projection[0][0], p_projection[2][0], color='r')
 
     print("FRAME COUNT:::", frame_count)
-    # plt.savefig(r"C:\Users\Kartik\Documents\ENPM673\PROJECT_3\ENPM673\Project_5\FinalOutput\output_" + str(frame_count) + ".png")
+    # plt.savefig(r"C:\Users\kusha\Documents\ENPM673\PROJECT_3\ENPM673\Project_5\FinalOutput\output_" + str(frame_count) + ".png")
     plt.pause(0.1)
 
     if cv2.waitKey(1) == 27:
